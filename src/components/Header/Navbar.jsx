@@ -5,7 +5,9 @@ const Navbar = () => {
     <>
       <li>
         <a>
-          <button className="btn btn-outline btn-success">Home</button>
+          <button className="btn btn-outline btn-success font-bold">
+            Home
+          </button>
         </a>
       </li>
       <li>
@@ -44,18 +46,16 @@ const Navbar = () => {
             {list}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl font-bold hidden md:flex">
-          Book Vibe
-        </a>
+        <a className="text-xl font-black hidden md:flex">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 justify-center items-center font-medium">
+        <ul className="menu menu-horizontal px-1 justify-center items-center font-bold">
           {list}
         </ul>
       </div>
       <div className="navbar-end space-x-2">
-        <a className="btn btn-success">Sign In</a>
-        <a className="btn btn-accent">Sign Up</a>
+        <a className="btn btn-success font-bold">Sign In</a>
+        <a className="btn btn-accent font-bold">Sign Up</a>
       </div>
     </div>
   );
