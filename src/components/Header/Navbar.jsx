@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const list = (
     <>
       <li>
-        <a>
+        <Link to="/">
           <button className="btn btn-outline btn-success font-bold">
             Home
           </button>
-        </a>
+        </Link>
       </li>
       <li>
         <a>Listed Books</a>
@@ -49,7 +50,7 @@ const Navbar = () => {
         <a className="text-xl font-black hidden md:flex">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 justify-center items-center font-bold">
+        <ul className="menu-horizontal gap-3 px-1 justify-center items-center font-bold">
           {list}
         </ul>
       </div>

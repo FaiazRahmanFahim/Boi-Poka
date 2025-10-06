@@ -1,9 +1,9 @@
 import React from "react";
-import bannerImg from "../../assets/pngwing 1.png";
+import bannerImg from "../../assets/png-wing-1.png";
 
 const Banner = () => {
   return (
-    <div className="bg-[#13131310] my-10 rounded-xl flex flex-col-reverse md:flex-row justify-around items-center p-8 md:p-10">
+    <div className="bg-[#13131310] my-10 mx-auto rounded-xl flex flex-col-reverse md:flex-row justify-around items-center p-8 md:p-10">
       <div className="space-y-10 text-center md:text-start">
         <h1 className="text-3xl md:text-5xl font-black">
           Books to freshen up <br /> your bookshelf
