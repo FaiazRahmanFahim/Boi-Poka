@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import { readListToSLS, wishListToSLS } from "../../utility/AddToLS";
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -8,10 +9,19 @@ const BookDetails = () => {
   const bookData = useLoaderData();
   //console.log(bookData);
   const findBook = bookData.find((book) => book.bookId === bookID);
-  console.log(findBook);
+  //console.log(findBook);
+
+  const handleMarksAsRead = (ID) => {
+    //console.log(ID);
+    readListToSLS(ID.bookId);
+  };
+  const handleWishList = (ID) => {
+    //console.log(ID);
+    wishListToSLS(ID.bookId);
+  };
 
   return (
-    <div className="flex justify-between items-center my-10 gap-10">
+    <div className="flex mx-auto justify-between items-center my-10 gap-10">
       <div className="flex flex-1 p-10 bg-[#13131310] justify-center items-center rounded-xl shadow">
         <img
           className="w-105 h-130 contain-content"
@@ -78,10 +88,19 @@ const BookDetails = () => {
             </tr>
           </tbody>
         </table>
-
         <div className="flex gap-4">
-          <button className="btn btn-outline btn-accent font-extrabold">Read</button>
-          <button className="btn btn-outline btn-info font-extrabold">Wishlist</button>
+          <button
+            onClick={() => handleMarksAsRead(findBook)}
+            className="btn btn-outline btn-accent font-extrabold"
+          >
+            Marks as read
+          </button>
+          <button
+            onClick={() => handleWishList(findBook)}
+            className="btn btn-outline btn-info font-extrabold"
+          >
+            Wishlist
+          </button>
         </div>
       </div>
     </div>
